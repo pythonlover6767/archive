@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Account{% endblock %}
+
+{% block content %}
+
+<div class="account">
+    <h1 class="account-title">Edit account details</h1>
+    <form action="{{ url_for('views.account') }}" method="post">
+        <input type="text" name="email" placeholder="{{ user['email'] }}"/>
+        <p></p>
+        <input type="text" name="username" placeholder="{{ user['username'] }}"/>
+        <p></p>
+        <input type="password" name="password" placeholder="..."/>
+        <p></p>
+        <button class="registration-submit-button" type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
